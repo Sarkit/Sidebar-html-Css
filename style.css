@@ -1,0 +1,127 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+:root{
+	--body-bgcolor:#293855;
+	--sidebar-bgcolor:#C2E7C9;
+	--text-color:#ffffff;
+	--sidebar-hovercolor:#F2AC20;
+	--activelinks-bgcolor:#4265D6;
+
+}
+
+body{
+	background: var(--body-bgcolor);
+}
+.sidebar{
+	background: var(--sidebar-bgcolor);
+	width: 100px;
+	height: 100vh;
+
+	/*transition: width 0.5s;*/
+	transition: width 0.7s ease-in-out;
+}
+
+/*++++++++ Inside Sidebar ++++++++*/
+
+/*+++++++  User +++++++*/
+.user{
+	background: var(--sidebar-hovercolor);
+	display: flex;
+	justify-content: space-between;
+	cursor: pointer;
+	padding: 15px 20px;
+	border-radius: 20px;
+	/*width: 240px;*/
+	width: 70px;
+	position: relative;
+	top: 5px;
+	left: 5px;
+	transition: width 0.7s ease-in-out;
+
+}
+.user-details h2, .user-details p {
+    display: none;
+
+}
+.user-img{
+	width: 40px;
+
+}
+
+/* ++++++++ Navbar Items ++++++++++ */
+.sidebar-items{
+	/*background: gray;*/
+	margin-top: 10px;
+	padding: 10px 0;
+
+}
+.sidebar-items img{
+	width: 25px;
+	margin-right: 30px;
+
+}
+
+.sidebar-items ul{
+	text-decoration: none;
+}
+.sidebar-items ul li{
+	display: flex;
+	align-items: center;
+	/*justify-content: space-evenly;*/
+	padding: 15px 10px;
+	border-radius: 20px;
+	justify-content: flex-start;
+	cursor: pointer;
+
+	transition: 0.5s;
+}
+.sidebar-items ul li img {
+    margin-left: 18px; 
+}
+.sidebar-items ul li p{
+	
+	font-size: 20px;
+	font-weight: 550;
+	align-content: center;
+
+	display: none;
+}
+
+/*+++++++ Hover Effects on items +++++++*/
+
+.sidebar-items ul li:hover{
+	background: var(--sidebar-hovercolor);
+	padding: 2px 10px;
+}
+
+
+/* ++++++++ Hover Effects on resize sidebar ++++++++++++ */
+
+.sidebar:hover{
+	width: 250px;
+}
+.sidebar:hover .sidebar-items ul li p {
+    display: block;
+}
+.sidebar:hover .user-details h2, 
+.sidebar:hover .user-details p {
+    display: block;
+
+}
+
+.sidebar:hover .user{
+	
+	width: 240px;
+	
+}
+/*+++++ logout +++++++*/
+
+.logout{
+	margin-top: 60px;
+	
+	
+}
+
